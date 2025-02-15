@@ -11,10 +11,10 @@
     content="admin template, Convex admin template, dashboard template, flat admin template, responsive admin template, web app">
   <meta name="author" content="PIXINVENT">
   <title>eCommerce Dashboard - Convex bootstrap 4 admin dashboard template</title>
-  <link rel="apple-touch-icon" sizes="60x60" href="../app-assets/img/ico/apple-icon-60.html">
-  <link rel="apple-touch-icon" sizes="76x76" href="../app-assets/img/ico/apple-icon-76.html">
-  <link rel="apple-touch-icon" sizes="120x120" href="../app-assets/img/ico/apple-icon-120.html">
-  <link rel="apple-touch-icon" sizes="152x152" href="../app-assets/img/ico/apple-icon-152.html">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('./app-assets/img/ico/apple-icon-60.html') }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('./app-assets/img/ico/apple-icon-76.html') }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('./app-assets/img/ico/apple-icon-120.html') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('./app-assets/img/ico/apple-icon-152.html') }}">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://pixinvent.com/demo/convex-bootstrap-admin-dashboard-template/app-assets/img/ico/favicon.ico">
   <link rel="shortcut icon" type="image/png" href="../app-assets/img/ico/favicon-32.png">
@@ -24,13 +24,13 @@
   <link
     href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../app-assets/fonts/feather/style.min.css">
-  <link rel="stylesheet" type="text/css" href="../app-assets/fonts/simple-line-icons/style.css">
-  <link rel="stylesheet" type="text/css" href="../app-assets/fonts/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/perfect-scrollbar.min.css">
-  <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/prism.min.css">
-  <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/chartist.min.css">
-  <link rel="stylesheet" type="text/css" href="../app-assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/fonts/feather/style.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/fonts/simple-line-icons/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/fonts/font-awesome/css/font-awesome.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/vendors/css/perfect-scrollbar.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/vendors/css/prism.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/vendors/css/chartist.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('./app-assets/css/app.css') }}">
 </head>
 
 <body data-col="2-columns" class=" 2-columns ">
