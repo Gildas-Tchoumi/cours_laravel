@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UniteController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,17 @@ Route::get('/dashboard',
 Route::get('/unites', [UniteController::class, 'index'])->name('unites');
 Route::get('/unites/create', [UniteController::class, 'create'])->name('unites.create');
 Route::post('/unites/store', [UniteController::class, 'store'])->name('unites.store');
+Route::get('/unites/edit/{id}', [UniteController::class, 'edit'])->name('unites.edit');
+Route::post('/unites/update/{id}', [UniteController::class, 'update'])->name('unites.update');
+Route::get('/unites/delet/{id}', [UniteController::class, 'destroy'])->name('unites.delet');
+
+// Route::resource('unites', UniteController::class);
+
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');
+
+
+Route::get('/product', [ProductController::class, 'listeprod'])->name('products');
+Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('/product/store', [ProductController::class, 'store'])->name('products.store');

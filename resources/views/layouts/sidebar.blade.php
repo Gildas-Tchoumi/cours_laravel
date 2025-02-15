@@ -27,9 +27,9 @@ class="app-sidebar">
         <ul class="menu-content">
           <li><a href="{{ route('unites') }}" class="menu-item">Unites</a>
           </li>
-          <li><a href="taskboard.html" class="menu-item">Taskboard</a>
+          <li><a href="{{ route('categories') }}" class="menu-item">Category</a>
           </li>
-          <li><a href="calendar.html" class="menu-item">Calendar</a>
+          <li><a href="{{ route('products') }}" class="menu-item">Product</a>
           </li>
         </ul>
       </li>
