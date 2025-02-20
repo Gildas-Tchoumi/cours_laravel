@@ -31,6 +31,10 @@ class="app-sidebar">
           </li>
           <li><a href="{{ route('products') }}" class="menu-item">Product</a>
           </li>
+          <li><a href="{{ route('utilisateur') }}" class="menu-item">Utilisateurs</a>
+          </li>
+          <li><a href="{{ route('roles') }}" class="menu-item">Roles</a>
+          </li>
         </ul>
       </li>
       <li class="has-sub nav-item"><a href="#"><i class="icon-magnet"></i><span data-i18n="" class="menu-title">UI

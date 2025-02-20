@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UniteController;
+use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -33,3 +35,14 @@ Route::post('/categories/store', [CategoryController::class, 'store'])->name('ca
 Route::get('/product', [ProductController::class, 'listeprod'])->name('products');
 Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
 Route::post('/product/store', [ProductController::class, 'store'])->name('products.store');
+
+Route::get('/utilisateur', [UtilisateurController::class, 'index'])->name('utilisateur');
+Route::get('/utilisateur/create', [UtilisateurController::class, 'create'])->name('utilisateur.create');
+Route::post('/utilisateur/store', [UtilisateurController::class, 'store'])->name('utilisateur.store');
+Route::get('/utilisateur/roles/asign/{id}', [UtilisateurController::class, 'Rolesasign'])->name('utilisateur.rolesasign');
+Route::post('/utilisateur/roles/asign/{id}', [UtilisateurController::class, 'Rolesutilisateur'])->name('utilisateur.Rolesutilisateur');
+
+Route::get('/roles', [RolesController::class, 'index'])->name('roles');
+Route::get('/roles/create', [RolesController::class, 'create'])->name('roles.create');
+Route::post('/roles/store', [RolesController::class, 'store'])->name('roles.store');
+
