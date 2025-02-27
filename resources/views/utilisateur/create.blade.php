@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('Auth.login')
 
 @section('title', 'Create users')
 
@@ -6,9 +6,9 @@
 
 @endsection
 
-@section('content')
+@section('container')
         <div class="content-wrapper">
-            <h3 class="title m-2 text-uppercase">Create utilisateur</h3>
+            <h3 class="title m-2 text-uppercase">S'inscrire</h3>
             <div class="container-fluid"><!--Statistics cards Starts-->
                 <div class="row">
                     <div class="modal-body">
@@ -69,6 +69,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="card-footer grey darken-1">
+            {{-- <div class="text-center mb-1">Forgot Password? <a><b>Reset</b></a></div> --}}
+            <div class="text-center">Don't have an account? <a href="{{ route('login') }}"><b>SignIn</b></a></div>
         </div>
 @endsection
 <!-- Modal -->
