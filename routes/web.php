@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UniteController;
@@ -8,7 +9,18 @@ use App\Http\Controllers\UtilisateurController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+
+
+Route::get('/', [HomeController::class, 'showlogin'])->name('login');
+Route::post('/login', [HomeController::class, 'login'])->name('login.utilsateurs');
+Route::get('/utilisateur/create', [UtilisateurController::class, 'create'])->name('utilisateur.create');
+Route::post('/utilisateur/store', [UtilisateurController::class, 'store'])->name('utilisateur.store');
+
+
+Route::middleware(['auth'])->group( function () {
+
+
+Route::get('/homepage', function () {
     return view('welcome');
 });
 
@@ -37,8 +49,6 @@ Route::get('/product/create', [ProductController::class, 'create'])->name('produ
 Route::post('/product/store', [ProductController::class, 'store'])->name('products.store');
 
 Route::get('/utilisateur', [UtilisateurController::class, 'index'])->name('utilisateur');
-Route::get('/utilisateur/create', [UtilisateurController::class, 'create'])->name('utilisateur.create');
-Route::post('/utilisateur/store', [UtilisateurController::class, 'store'])->name('utilisateur.store');
 Route::get('/utilisateur/roles/asign/{id}', [UtilisateurController::class, 'Rolesasign'])->name('utilisateur.rolesasign');
 Route::post('/utilisateur/roles/asign/{id}', [UtilisateurController::class, 'Rolesutilisateur'])->name('utilisateur.Rolesutilisateur');
 
@@ -46,3 +56,4 @@ Route::get('/roles', [RolesController::class, 'index'])->name('roles');
 Route::get('/roles/create', [RolesController::class, 'create'])->name('roles.create');
 Route::post('/roles/store', [RolesController::class, 'store'])->name('roles.store');
 
+});

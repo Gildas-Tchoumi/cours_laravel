@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendMail;
 use App\Models\Roles;
 use App\Models\Utilisateur;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class UtilisateurController extends Controller
@@ -19,6 +21,8 @@ class UtilisateurController extends Controller
     }
 
     public function store(Request $request) {
+
+        $messag = "votre compte est creer avec success";
         // validate the data before storing it in the database
         $request->validate([
             'first_name' =>'required',
@@ -36,8 +40,10 @@ class UtilisateurController extends Controller
 
         $utilisateur->save();
 
+        Mail::to($utilisateur->email)->send(new SendMail($utilisateur,$messag));
+
         // redirect to the utilisateur list page
-        return redirect()->route('utilisateur');
+        return redirect()->route('login');
     }
     public function Rolesasign($id) {
         $utilisateur = Utilisateur::find($id);
